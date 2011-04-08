@@ -1,0 +1,20 @@
+Introduction
+============
+If you ever wanted to consume SMS in your RESTful Web appliction (for free), read on.
+
+What you need before you start
+==============================
+1. Google stuff (FREE!):
+   * A GMail Account (yourname@gmail.com)
+   * A Google Voice account for your gmail account yourname@gmail.com
+   * A Google AppEngine Account
+
+2. An Application that has a RESTful API.  This repo comes with a Rails example, but you can use any type of technology as long as you expose a REST API.
+
+Installation
+============
+1. Download this git
+2. Open the .py file and change the line that points to your 
+3. Deploy the Python Application to your GoogleAppEngine account
+4. Deploy the Rails example app to your Rails server
+5. try it out
