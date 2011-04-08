@@ -11,10 +11,19 @@ What you need before you start
 
 2. An Application that has a RESTful API.  This repo comes with a Rails example, but you can use any type of technology as long as you expose a REST API.
 
-Installation
-============
+Installation: Short version
+===========================
 1. Download this git
-2. Open the .py file and change the line that points to your 
-3. Deploy the Python Application to your GoogleAppEngine account
-4. Deploy the Rails example app to your Rails server
-5. try it out
+2. Open handle_incoming_email.py file and change the url that points to your restful api
+3. Open app.yaml and change the application name to whatever you want
+4. Deploy the Python Application to your GoogleAppEngine account
+5. Deploy the Rails example app to your Rails server
+6. Configure Google Voice to foreward SMS to your Gmail account
+7. Configure Gmail to foreward email from Google Voice to your Google AppEngine App (<anything_you_want>@<your_application_name>.appspotmail.com
+
+Installation: Long Version
+==========================
+
+How Does It Work
+================
+When you send an SMS message to your Google Voice number, because you configured it to fwd any incoming SMS to your email account, it will trigger an email being send to your email (Duh!).  Your email has been setup to foreward any email it receives from Google Voice (@txt.voice.google.com) to your Google AppEngine Application.  The application (provided) has been setup to accept incoming emails and will POST the content of the email to your RESTful API which you provide in the handle_incoming_email.py script.  You then can do whatever you want in this API with the provided content.
