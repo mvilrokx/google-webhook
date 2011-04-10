@@ -20,6 +20,7 @@ class WebHook(InboundMailHandler):
             "sender": mail_message.sender,
             "subject": mail_message.subject,
             "to": mail_message.to,
+            "cc": mail_message.cc,
             "date": mail_message.date,
             "body": body[1].decode()
         }
